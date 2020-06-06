@@ -1,0 +1,131 @@
+
+$primary-color:rgba(30,20,20,0.7);
+$secondary-color:rgba(150,150,150,0.7);
+$overlay-color:rgba(80,80,80,0.7);
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:"Roboto",sans-serif;
+    line-height: 1.4;
+}
+li{
+    list-style-type:none;
+    color:#fff;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.container{
+    max-width: 1100px;
+    margin:auto;
+    padding:0 1rem;
+}
+
+.menu{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    .hamburger{
+        position:fixed;
+        top:0;
+        right:0;
+        width:50px;
+        height:50px;
+        z-index:1;
+        background-color:$primary-color;
+        transition:all 0.5s ease-in-out;
+    }
+}
+
+.cross_1,.cross_2,.cross_3{
+    position: absolute;
+    background-color:white;
+    width:60%;
+    margin-left:0.7rem;
+    height:2px;
+    top:12px;
+    transition:all 0.5s ease-in-out;
+}
+
+.cross_3{
+    top:38px;
+}
+.cross_2{
+    top:25px;
+}
+
+.cross-rotate-2{
+    transform:rotate(135deg);
+}
+.cross-rotate-1{
+    top:25px;
+    transform:rotate(225deg);
+}
+.cross-rotate-3{
+    top:25px;
+    transform:rotate(225deg);
+}
+
+
+.menu{
+    .menu-trap{
+        position:fixed;
+        top:0;
+        right:0;
+        width:20%;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        height:100%;
+        font-size:1.3rem;
+        
+        transition:all 0.5s ease-in-out;
+        div{
+            background-color: $overlay-color;
+            width:100%;
+            height:100%;
+            flex:none;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-radius:20% 0 0 20%;
+            
+            transition:all 0.5s ease-in-out;
+            div{
+                text-align:center;
+                
+                transition:all 0.5s ease-in-out;
+                ul>li{
+                    border-bottom:0.5px dotted #ccc;
+                    margin:2.5rem 0;
+                    a{
+                        display:inline-block;
+                        padding:0 1rem;
+                        &:hover{
+                            color:orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.visible{
+    visibility:hidden;
+}
+
+.scale{
+    transform:translateX(600px);
+}
+
+.opacity{
+    opacity:0;
+}
